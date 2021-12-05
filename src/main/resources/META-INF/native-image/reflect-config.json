@@ -1,0 +1,149 @@
+[
+  {
+    "name" : "org.apache.camel.component.atom.AtomConverterLoader",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.component.file.GenericFileConverterLoader",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.converter.jaxp.CamelXmlJaxpBulkConverterLoader",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.converter.CamelBaseBulkConverterLoader",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.converter.stream.StreamCacheBulkConverterLoader",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.component.atom.AtomComponent",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.component.splunkhec.SplunkHECComponent",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.language.simple.SimpleLanguage",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.processor.DefaultProcessorFactory",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.processor.DefaultInternalProcessorFactory",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.xml.jaxb.DefaultModelJAXBContextFactory",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.component.properties.PropertiesComponent",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.component.atom.AtomComponent",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.component.splunkhec.SplunkHECComponent",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.impl.health.DefaultHealthCheckRegistry",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.component.atom.AtomComponentConfigurer",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.component.atom.AtomEndpointConfigurer",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.component.splunkhec.SplunkHECComponentConfigurer",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.component.splunkhec.SplunkHECEndpointConfigurer",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.commons.logging.LogFactory",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.commons.logging.impl.LogFactoryImpl",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.commons.logging.impl.Jdk14Logger",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "org.apache.abdera.parser.stax.FOMParser",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "org.apache.abdera.parser.stax.FOMFactory",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+]

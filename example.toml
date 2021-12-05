@@ -1,0 +1,9 @@
+atom= ["https://github.com/bitcoin/bitcoin/releases.atom", "https://github.com/ethereum/go-ethereum/releases.atom"]
+
+[hec]
+host="splunk:8088"
+token="00000000-0000-0000-0000-000000000000"
+index="feeds"
+source="releases"
+sourcetype="github:releases"
+skipTlsVerify=true

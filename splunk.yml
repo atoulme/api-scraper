@@ -1,0 +1,10 @@
+splunk:
+  conf:
+    indexes:
+      directory: /opt/splunk/etc/apps/search/local
+      content:
+        feeds:
+          coldPath: $SPLUNK_DB/feeds/colddb
+          homePath: $SPLUNK_DB/feeds/db
+          maxTotalDataSizeMB: 512000
+          thawedPath: $SPLUNK_DB/feeds/thaweddb
