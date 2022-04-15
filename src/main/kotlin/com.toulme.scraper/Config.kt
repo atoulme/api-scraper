@@ -20,6 +20,7 @@ class Config(private var config: Configuration = Configuration.empty(createSchem
             hecSection.addBoolean("skipTlsVerify", false, "Skip TLS verification", null)
 
             val builder = SchemaBuilder.create()
+            builder.addString("persistence", ".checkpoint", "Location of the idempotent persistence layer", null)
             builder.addSection("hec", hecSection.toSchema())
             builder.addListOfString("atom", listOf<String>(), "List of Atom feeds", null)
             return builder.toSchema()
@@ -51,4 +52,6 @@ class Config(private var config: Configuration = Configuration.empty(createSchem
     fun skipTlsVerify() = config.getBoolean("hec.skipTlsVerify")
 
     fun feeds(): List<String> = config.getListOfString("atom")
+
+    fun persistence() = config.getString("persistence")
 }

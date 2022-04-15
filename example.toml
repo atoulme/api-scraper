@@ -1,3 +1,5 @@
+persistence= "/tmp"
+
 atom= ["https://github.com/bitcoin/bitcoin/releases.atom", "https://github.com/ethereum/go-ethereum/releases.atom"]
 
 [hec]
