@@ -28,7 +28,7 @@ fun main(args: Array<String>) {
         .location(path.resolve("idempotent").toAbsolutePath().toString())
         .expiredLocation(path.resolve("idempotent-expired").toAbsolutePath().toString()).build()
     val infinispanConfig = InfinispanEmbeddedConfiguration()
-    val cacheManager = DefaultCacheManager(GlobalConfigurationBuilder().defaultCacheName("api-scraper").build(), cacheConfig, true)
+    val cacheManager = DefaultCacheManager(GlobalConfigurationBuilder().defaultCacheName("atom").build(), cacheConfig, true)
     infinispanConfig.cacheContainer = cacheManager
 
     val repo = InfinispanEmbeddedIdempotentRepository("atom")
@@ -39,8 +39,8 @@ fun main(args: Array<String>) {
         override fun configure() {
             for (feed in config.feeds()) {
                 from(String.format(config.atomURIFormat(), feed))
-                    .convertBodyTo(String::class.java)
                     .idempotentConsumer(simple("\${body.id.toASCIIString}"), repo)
+                    .convertBodyTo(String::class.java)
                     .to(
                         String.format(
                             "splunk-hec:%s/%s?skipTlsVerify=%s&index=%s&source=%s&sourcetype=%s&bodyOnly=true",
