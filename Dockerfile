@@ -5,8 +5,8 @@ COPY src /opt/graalvm/src
 COPY gradle /opt/graalvm/gradle
 COPY .gradle /opt/graalvm/.gradle
 
-RUN ./gradlew installNativeImage
-RUN ./gradlew nativeImage
+RUN ./gradlew installNativeImage -Pgraalvm.home=/opt/java
+RUN ./gradlew nativeImage -Pgraalvm.home=/opt/java
 
 FROM openjdk:17-slim-buster
 COPY --from=builder /opt/graalvm/build/executable/api-scraper /bin/api-scraper

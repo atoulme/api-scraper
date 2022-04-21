@@ -6,6 +6,7 @@ import org.apache.camel.component.infinispan.embedded.InfinispanEmbeddedConfigur
 import org.apache.camel.component.infinispan.embedded.InfinispanEmbeddedIdempotentRepository
 import org.apache.camel.impl.DefaultCamelContext
 import org.infinispan.configuration.cache.ConfigurationBuilder
+import org.infinispan.configuration.global.GlobalConfigurationBuilder
 import org.infinispan.manager.DefaultCacheManager
 import org.infinispan.persistence.rocksdb.configuration.RocksDBStoreConfigurationBuilder
 import java.nio.file.Paths
@@ -27,7 +28,7 @@ fun main(args: Array<String>) {
         .location(path.resolve("idempotent").toAbsolutePath().toString())
         .expiredLocation(path.resolve("idempotent-expired").toAbsolutePath().toString()).build()
     val infinispanConfig = InfinispanEmbeddedConfiguration()
-    val cacheManager = DefaultCacheManager(cacheConfig, true)
+    val cacheManager = DefaultCacheManager(GlobalConfigurationBuilder().defaultCacheName("api-scraper").build(), cacheConfig, true)
     infinispanConfig.cacheContainer = cacheManager
 
     val repo = InfinispanEmbeddedIdempotentRepository("atom")

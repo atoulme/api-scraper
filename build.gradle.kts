@@ -15,7 +15,7 @@ apply(plugin ="com.github.johnrengelman.shadow")
 dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
-    implementation(platform("org.apache.camel:camel-bom:3.13.0"))
+    implementation(platform("org.apache.camel:camel-bom:3.16.0"))
     implementation("org.apache.camel:camel-core")
     implementation("org.apache.camel:camel-atom")
     implementation("org.apache.camel:camel-infinispan-embedded")
@@ -40,6 +40,7 @@ tasks{
 
 nativeImage {
     dependsOn("shadowJar")
+    graalVmHome = project.properties.get("graalvm.home") as String? ?: throw GradleException("Please configure GraalVM by setting an env var GRAALVM_HOME or a project property graalvm.home")
     mainClass ="com.toulme.scraper.MainKt" // Deprecated, use `buildType.executable.main` as follows instead.
     buildType { build ->
         build.executable(main = "com.toulme.scraper.MainKt")
@@ -50,7 +51,6 @@ nativeImage {
     arguments(
             "--no-fallback",
             "--allow-incomplete-classpath",
-            "-H:IncludeResources=META-INF/services/*.*",
             "-H:+UseServiceLoaderFeature",
             "--enable-url-protocols=https"
     )

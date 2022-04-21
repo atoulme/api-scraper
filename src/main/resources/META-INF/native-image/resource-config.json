@@ -1,0 +1,24 @@
+{
+  "resources": {
+    "includes": [
+      {
+        "pattern": "META-INF/services/*"
+      },
+      {
+        "pattern": "META-INF/infinispan-version.properties"
+      },
+      {
+        "pattern": ".*/.*.proto"
+      },
+      {
+        "pattern": ".*.proto"
+      },
+      {
+        "pattern": "librocksdbjni.*"
+      }
+    ]
+  },
+  "bundles": [
+    {"name":"sun.security.util.Resources"}
+  ]
+}
