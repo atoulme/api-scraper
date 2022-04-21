@@ -23,9 +23,16 @@ class Config(private var config: Configuration = Configuration.empty(createSchem
             builder.addString("persistence", ".checkpoint", "Location of the idempotent persistence layer", null)
             builder.addSection("hec", hecSection.toSchema())
             builder.addListOfString("atom", listOf<String>(), "List of Atom feeds", null)
+            builder.addString(
+                "atomURIFormat",
+                "atom:%s?splitEntries=true&filter=false",
+                "format of the Camel endpoint for atom",
+                null
+            )
             return builder.toSchema()
         }
-        fun fromFile(path : String): Config {
+
+        fun fromFile(path: String): Config {
             try {
                 return Config(Configuration.fromToml(Paths.get(path), createSchema()))
             } catch (e: Exception) {
@@ -54,4 +61,5 @@ class Config(private var config: Configuration = Configuration.empty(createSchem
     fun feeds(): List<String> = config.getListOfString("atom")
 
     fun persistence() = config.getString("persistence")
+    fun atomURIFormat() = config.getString("atomURIFormat")
 }

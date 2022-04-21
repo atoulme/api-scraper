@@ -2,7 +2,7 @@
   "resources": {
     "includes": [
       {
-        "pattern": "META-INF/services/*"
+        "pattern": "META-INF/services/.*"
       },
       {
         "pattern": "META-INF/infinispan-version.properties"
@@ -15,6 +15,12 @@
       },
       {
         "pattern": "librocksdbjni.*"
+      },
+      {
+        "pattern": "META-INF/services/org/apache/camel/language/simple"
+      },
+      {
+        "pattern": "META-INF/services/org/apache/camel/language/bean"
       }
     ]
   },

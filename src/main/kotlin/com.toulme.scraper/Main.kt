@@ -38,7 +38,7 @@ fun main(args: Array<String>) {
     context.addRoutes(object : RouteBuilder() {
         override fun configure() {
             for (feed in config.feeds()) {
-                from(String.format("atom:%s?splitEntries=true", feed))
+                from(String.format(config.atomURIFormat(), feed))
                     .convertBodyTo(String::class.java)
                     .idempotentConsumer(simple("\${body.id.toASCIIString}"), repo)
                     .to(

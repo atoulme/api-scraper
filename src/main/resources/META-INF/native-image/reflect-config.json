@@ -48,6 +48,12 @@
     ]
   },
   {
+    "name" : "org.apache.camel.language.bean.BeanLanguage",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
     "name" : "org.apache.camel.processor.DefaultProcessorFactory",
     "methods": [
       { "name": "<init>", "parameterTypes": [] }
@@ -73,6 +79,12 @@
   },
   {
     "name" : "org.apache.camel.component.atom.AtomComponent",
+    "methods": [
+      { "name": "<init>", "parameterTypes": [] }
+    ]
+  },
+  {
+    "name" : "org.apache.camel.component.bean.BeanComponent",
     "methods": [
       { "name": "<init>", "parameterTypes": [] }
     ]
